@@ -16,11 +16,17 @@ LLM output can vary between chats. The assistant-pack standardizes:
 ## Quick start (new project)
 1. Create a new folder in `workspace/`, e.g. `workspace/my-app/`
 2. Copy `assistant-pack/PROJECT_CONTEXT_TEMPLATE.md` into `workspace/my-app/PROJECT_CONTEXT.md` and fill it.
-3. Start a new Cursor chat and paste:
+3. Start a new Cursor chat and paste in this order:
    - `assistant-pack/SESSION_BOOTSTRAP_GLOBAL.md`
    - `workspace/my-app/PROJECT_CONTEXT.md`
    - `assistant-pack/INIT_SESSION.md`
 4. Then paste your task.
+
+## Paste order (critical)
+When starting a new chat, always paste in this exact order:
+1. `assistant-pack/SESSION_BOOTSTRAP_GLOBAL.md`
+2. `<project>/PROJECT_CONTEXT.md`
+3. `assistant-pack/INIT_SESSION.md`
 
 ## When the model goes off-rails
 Paste `assistant-pack/RESET_PROMPT.md` to force a minimal diff + verification.
