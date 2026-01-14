@@ -1,12 +1,12 @@
 # Documents to AI-Readable Data
 
-Production-ready document and image parsing pipeline that converts PDFs and images (JPG/PNG) into structured, AI-readable data (JSON + Markdown).
+Document and image parsing pipeline (in development) that converts PDFs and images (JPG/PNG) into structured, AI-readable data (JSON + Markdown).
 
-**Status (V10):** Full pipeline supporting:
+**Status (V10):** Active development - pipeline supporting:
 - **PDF Processing** (V1-V8): Digital, scanned, and mixed PDFs with adaptive OCR
 - **Image Processing** (V9-V10): Music sheet OMR (Optical Music Recognition) and document image OCR
 
-See `PROJECT.md` for roadmap.
+**⚠️ Note:** This project is in active development. Some features may be incomplete or subject to change. See `PROJECT.md` for current status and roadmap.
 
 ## Core Logic: How the Pipeline Works
 
@@ -460,7 +460,9 @@ ruff check src/
 python tools/ocr_smoke_test.py data/10_work/pages_png/page_0000.png
 ```
 
-## Current Status (V10)
+## Current Status (V10) - In Development
+
+**⚠️ Development Status:** This project is actively being developed. Features are functional but may have limitations. See known issues below.
 
 ### PDF Pipeline (V1-V8)
 - ✅ **OCR Strategy**: Tesseract is primary OCR engine
@@ -479,8 +481,11 @@ python tools/ocr_smoke_test.py data/10_work/pages_png/page_0000.png
 - ✅ **Metadata Extraction**: Title, composer, dynamics (with staff masking)
 - ⚠️ **Rhythm Semantics**: Partial (time offset errors, V10.1 planned for normalization)
 
-### Known Limitations
+### Known Limitations & Issues
 - **Music Sheet Rhythm**: Audiveris may produce rhythm errors on scanned material (systematic "voice excess", "no timeOffset" warnings). This is expected for V10 and will be addressed in V10.1 with post-processing normalization.
+- **Testing**: Comprehensive test suite is still being developed
+- **Documentation**: Some features may need additional documentation
+- **Error Handling**: Some edge cases may need improvement
 
 **Documentation:**
 - `PROJECT.md` - Project overview and roadmap
