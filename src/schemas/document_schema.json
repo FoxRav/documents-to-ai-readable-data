@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Document Schema",
+  "type": "object",
+  "required": ["pdf", "pages"],
+  "properties": {
+    "pdf": {
+      "type": "object",
+      "required": ["filename", "pages"],
+      "properties": {
+        "filename": {"type": "string"},
+        "pages": {"type": "integer", "minimum": 1}
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Page"
+      }
+    }
+  },
+  "definitions": {
+    "Page": {
+      "type": "object",
+      "required": ["page_index", "width", "height", "items"],
+      "properties": {
+        "page_index": {"type": "integer", "minimum": 0},
+        "width": {"type": "number", "minimum": 0},
+        "height": {"type": "number", "minimum": 0},
+        "mode": {"type": "string", "enum": ["native", "scan", "mixed"]},
+        "semantic_section": {"type": "string"},
+        "semantic_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "items": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {"$ref": "#/definitions/Block"},
+              {"$ref": "#/definitions/Table"}
+            ]
+          }
+        }
+      }
+    },
+    "Block": {
+      "type": "object",
+      "required": ["block_id", "type", "text", "bbox", "source"],
+      "properties": {
+        "block_id": {"type": "string"},
+        "type": {"type": "string", "enum": ["text", "title", "section_header", "list_item", "caption", "footnote", "formula", "picture"]},
+        "text": {"type": "string"},
+        "bbox": {"$ref": "#/definitions/BBox"},
+        "source": {"type": "string", "enum": ["native", "ocr", "mineru", "dolphin"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "font_stats": {
+          "type": "object",
+          "properties": {
+            "size": {"type": "number"},
+            "family": {"type": "string"},
+            "bold": {"type": "boolean"},
+            "italic": {"type": "boolean"}
+          }
+        },
+        "semantic_type": {"type": "string"},
+        "financial_type": {"type": "string"},
+        "classification_evidence": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "Table": {
+      "type": "object",
+      "required": ["table_id", "bbox", "source"],
+      "properties": {
+        "table_id": {"type": "string"},
+        "bbox": {"$ref": "#/definitions/BBox"},
+        "source": {"type": "string", "enum": ["vector", "ocr", "mineru", "dolphin"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "cells": {
+          "type": "array",
+          "items": {"$ref": "#/definitions/Cell"}
+        },
+        "grid": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "semantic_type": {"type": "string"},
+        "financial_type": {"type": "string"},
+        "classification_evidence": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "Cell": {
+      "type": "object",
+      "required": ["row", "col", "text_raw"],
+      "properties": {
+        "row": {"type": "integer", "minimum": 0},
+        "col": {"type": "integer", "minimum": 0},
+        "text_raw": {"type": "string"},
+        "value_num": {"type": ["number", "null"]},
+        "unit": {"type": ["string", "null"]},
+        "bbox": {"$ref": "#/definitions/BBox"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "BBox": {
+      "type": "object",
+      "required": ["x0", "y0", "x1", "y1"],
+      "properties": {
+        "x0": {"type": "number"},
+        "y0": {"type": "number"},
+        "x1": {"type": "number"},
+        "y1": {"type": "number"}
+      }
+    }
+  }
+}

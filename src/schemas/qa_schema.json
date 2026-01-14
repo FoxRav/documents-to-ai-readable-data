@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QA Report Schema",
+  "type": "object",
+  "required": ["pdf", "schema_valid", "findings"],
+  "properties": {
+    "pdf": {
+      "type": "object",
+      "required": ["filename"],
+      "properties": {
+        "filename": {"type": "string"},
+        "pages": {"type": "integer"}
+      }
+    },
+    "schema_valid": {"type": "boolean"},
+    "table_cell_exactness": {
+      "type": "object",
+      "properties": {
+        "empty_cells_percent": {"type": "number", "minimum": 0, "maximum": 100},
+        "unparseable_numbers_percent": {"type": "number", "minimum": 0, "maximum": 100}
+      }
+    },
+    "sum_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page_index", "table_id", "row_or_col", "expected", "actual", "difference", "severity"],
+        "properties": {
+          "page_index": {"type": "integer"},
+          "table_id": {"type": "string"},
+          "row_or_col": {"type": "string"},
+          "expected": {"type": "number"},
+          "actual": {"type": "number"},
+          "difference": {"type": "number"},
+          "severity": {"type": "string", "enum": ["error", "warning", "info"]}
+        }
+      }
+    },
+    "balance_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page_index", "table_id", "assets", "liabilities", "difference", "severity"],
+        "properties": {
+          "page_index": {"type": "integer"},
+          "table_id": {"type": "string"},
+          "assets": {"type": "number"},
+          "liabilities": {"type": "number"},
+          "difference": {"type": "number"},
+          "severity": {"type": "string", "enum": ["error", "warning", "info"]}
+        }
+      }
+    },
+    "xref_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["reference", "found_in_main", "found_in_notes", "severity"],
+        "properties": {
+          "reference": {"type": "string"},
+          "found_in_main": {"type": "boolean"},
+          "found_in_notes": {"type": "boolean"},
+          "severity": {"type": "string", "enum": ["error", "warning", "info"]}
+        }
+      }
+    },
+    "diff_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page_index", "table_id", "sources", "differences", "severity"],
+        "properties": {
+          "page_index": {"type": "integer"},
+          "table_id": {"type": "string"},
+          "sources": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "differences": {"type": "string"},
+          "severity": {"type": "string", "enum": ["error", "warning", "info"]}
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Finding"
+      }
+    }
+  },
+  "definitions": {
+    "Finding": {
+      "type": "object",
+      "required": ["checker", "page_index", "reason", "severity"],
+      "properties": {
+        "checker": {"type": "string"},
+        "page_index": {"type": "integer"},
+        "block_id": {"type": ["string", "null"]},
+        "table_id": {"type": ["string", "null"]},
+        "bbox": {
+          "type": ["object", "null"],
+          "properties": {
+            "x0": {"type": "number"},
+            "y0": {"type": "number"},
+            "x1": {"type": "number"},
+            "y1": {"type": "number"}
+          }
+        },
+        "reason": {"type": "string"},
+        "severity": {"type": "string", "enum": ["error", "warning", "info"]},
+        "suggestion": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

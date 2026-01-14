@@ -1,0 +1,532 @@
+{
+  "is_music_sheet": true,
+  "confidence": 0.85,
+  "staff_count": 7,
+  "metadata": {
+    "title": "7x7",
+    "composer": "Pekka Kostiainen 1997-2001",
+    "dedication": "Kai Niemiselle",
+    "tempo": null,
+    "time_signature": null,
+    "key_signature": null,
+    "instrument": null,
+    "copyright": null,
+    "performance_notes": [],
+    "dynamics": [
+      "f"
+    ],
+    "expressions": [],
+    "measure_count": 0
+  },
+  "blocks": [
+    {
+      "block_id": "music_b_0",
+      "type": "text",
+      "text": "Kai",
+      "bbox": {
+        "x0": 388.0,
+        "y0": 61.0,
+        "x1": 404.0,
+        "y1": 70.0
+      },
+      "source": "ocr",
+      "confidence": 0.92,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_1",
+      "type": "text",
+      "text": "Niemiselle",
+      "bbox": {
+        "x0": 407.0,
+        "y0": 61.0,
+        "x1": 456.0,
+        "y1": 70.0
+      },
+      "source": "ocr",
+      "confidence": 0.75,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_2",
+      "type": "text",
+      "text": "7x7",
+      "bbox": {
+        "x0": 369.0,
+        "y0": 88.0,
+        "x1": 434.0,
+        "y1": 111.0
+      },
+      "source": "ocr",
+      "confidence": 0.93,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_3",
+      "type": "text",
+      "text": "Pekka",
+      "bbox": {
+        "x0": 582.0,
+        "y0": 133.0,
+        "x1": 614.0,
+        "y1": 143.0
+      },
+      "source": "ocr",
+      "confidence": 0.91,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_4",
+      "type": "text",
+      "text": "Kostiainen",
+      "bbox": {
+        "x0": 618.0,
+        "y0": 133.0,
+        "x1": 676.0,
+        "y1": 143.0
+      },
+      "source": "ocr",
+      "confidence": 0.88,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_5",
+      "type": "text",
+      "text": "1997-2001",
+      "bbox": {
+        "x0": 682.0,
+        "y0": 133.0,
+        "x1": 736.0,
+        "y1": 143.0
+      },
+      "source": "ocr",
+      "confidence": 0.91,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_6",
+      "type": "music_measure_num",
+      "text": "0",
+      "bbox": {
+        "x0": 154.0,
+        "y0": 144.0,
+        "x1": 168.0,
+        "y1": 151.0
+      },
+      "source": "ocr",
+      "confidence": 0.66,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_7",
+      "type": "text",
+      "text": "2017",
+      "bbox": {
+        "x0": 75.0,
+        "y0": 1010.0,
+        "x1": 97.0,
+        "y1": 1018.0
+      },
+      "source": "ocr",
+      "confidence": 0.84,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_8",
+      "type": "text",
+      "text": "SULASOL,",
+      "bbox": {
+        "x0": 103.0,
+        "y0": 1010.0,
+        "x1": 152.0,
+        "y1": 1019.0
+      },
+      "source": "ocr",
+      "confidence": 0.87,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_9",
+      "type": "text",
+      "text": "Helsinki",
+      "bbox": {
+        "x0": 157.0,
+        "y0": 1010.0,
+        "x1": 194.0,
+        "y1": 1018.0
+      },
+      "source": "ocr",
+      "confidence": 0.9,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    },
+    {
+      "block_id": "music_b_10",
+      "type": "music_dynamic",
+      "text": "F",
+      "bbox": {
+        "x0": 98.0,
+        "y0": 459.0,
+        "x1": 109.0,
+        "y1": 473.0
+      },
+      "source": "ocr",
+      "confidence": 0.68,
+      "font_stats": null,
+      "semantic_type": null,
+      "financial_type": null,
+      "classification_evidence": [],
+      "ocr_pass_used": null,
+      "toc_target_page": null,
+      "pdf_target_page": null
+    }
+  ],
+  "detection_info": {
+    "staff_count": 7,
+    "min_staves_required": 3,
+    "staves": [
+      {
+        "staff_index": 0,
+        "top_y": 184,
+        "bottom_y": 204,
+        "line_spacing": 5.0,
+        "lines": [
+          {
+            "y": 184,
+            "x": 96,
+            "width": 459,
+            "height": 2
+          },
+          {
+            "y": 190,
+            "x": 110,
+            "width": 310,
+            "height": 1
+          },
+          {
+            "y": 194,
+            "x": 108,
+            "width": 324,
+            "height": 1
+          },
+          {
+            "y": 199,
+            "x": 96,
+            "width": 644,
+            "height": 1
+          },
+          {
+            "y": 204,
+            "x": 96,
+            "width": 644,
+            "height": 1
+          }
+        ]
+      },
+      {
+        "staff_index": 1,
+        "top_y": 288,
+        "bottom_y": 308,
+        "line_spacing": 5.0,
+        "lines": [
+          {
+            "y": 288,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 293,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 298,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 303,
+            "x": 65,
+            "width": 675,
+            "height": 1
+          },
+          {
+            "y": 308,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          }
+        ]
+      },
+      {
+        "staff_index": 2,
+        "top_y": 398,
+        "bottom_y": 418,
+        "line_spacing": 5.0,
+        "lines": [
+          {
+            "y": 398,
+            "x": 65,
+            "width": 674,
+            "height": 1
+          },
+          {
+            "y": 403,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 408,
+            "x": 65,
+            "width": 675,
+            "height": 1
+          },
+          {
+            "y": 413,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 418,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          }
+        ]
+      },
+      {
+        "staff_index": 3,
+        "top_y": 508,
+        "bottom_y": 528,
+        "line_spacing": 5.0,
+        "lines": [
+          {
+            "y": 508,
+            "x": 106,
+            "width": 634,
+            "height": 2
+          },
+          {
+            "y": 513,
+            "x": 106,
+            "width": 634,
+            "height": 1
+          },
+          {
+            "y": 518,
+            "x": 65,
+            "width": 675,
+            "height": 1
+          },
+          {
+            "y": 523,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 528,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          }
+        ]
+      },
+      {
+        "staff_index": 4,
+        "top_y": 616,
+        "bottom_y": 636,
+        "line_spacing": 5.0,
+        "lines": [
+          {
+            "y": 616,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 621,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 626,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 631,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          },
+          {
+            "y": 636,
+            "x": 64,
+            "width": 676,
+            "height": 1
+          }
+        ]
+      },
+      {
+        "staff_index": 5,
+        "top_y": 718,
+        "bottom_y": 738,
+        "line_spacing": 5.0,
+        "lines": [
+          {
+            "y": 718,
+            "x": 231,
+            "width": 508,
+            "height": 2
+          },
+          {
+            "y": 723,
+            "x": 65,
+            "width": 674,
+            "height": 2
+          },
+          {
+            "y": 728,
+            "x": 65,
+            "width": 674,
+            "height": 2
+          },
+          {
+            "y": 733,
+            "x": 65,
+            "width": 674,
+            "height": 2
+          },
+          {
+            "y": 738,
+            "x": 65,
+            "width": 674,
+            "height": 2
+          }
+        ]
+      },
+      {
+        "staff_index": 6,
+        "top_y": 923,
+        "bottom_y": 942,
+        "line_spacing": 4.75,
+        "lines": [
+          {
+            "y": 923,
+            "x": 65,
+            "width": 620,
+            "height": 1
+          },
+          {
+            "y": 928,
+            "x": 65,
+            "width": 620,
+            "height": 1
+          },
+          {
+            "y": 932,
+            "x": 65,
+            "width": 305,
+            "height": 2
+          },
+          {
+            "y": 937,
+            "x": 65,
+            "width": 675,
+            "height": 2
+          },
+          {
+            "y": 942,
+            "x": 81,
+            "width": 659,
+            "height": 2
+          }
+        ]
+      }
+    ]
+  },
+  "omr": {
+    "success": false,
+    "engine": "none",
+    "error": "Audiveris not installed. Install for full OMR support.",
+    "measure_count": 0
+  },
+  "qa": {
+    "status": "pass",
+    "findings": [
+      {
+        "check": "omr_available",
+        "severity": "info",
+        "message": "Audiveris not installed - no note-level data extracted"
+      }
+    ],
+    "checks_run": 5
+  }
+}
